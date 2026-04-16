@@ -38,10 +38,6 @@ def somma_pari(lista):
                             somma += numero #aggiungo alla somma i numeri pari
                 return somma  #restituisco la somma dei numeri pari
             
-            
-            
-            
-            
 # MENU PRINCIPALE            
             
 while True:
@@ -63,7 +59,7 @@ match(x): #x è la variabile che contiene la scelta dell utente
                
            
        case 2: #2.Genera una lista di numeri interi casuali tra 1 e n (incluso). La lunghezza della lista deve essere n.
-           
+                print("Generazione di una lista di numeri interi casuali tra 1 e n (incluso). La lunghezza della lista sarà n.")
              #chiamata alla funzione per ottenere un numero positivo
                 n = inserisci_num_positivo()
                 lista = genera_lista(n)
@@ -71,7 +67,7 @@ match(x): #x è la variabile che contiene la scelta dell utente
                 print(lista)
              
        case 3:#3.Utilizza un ciclo for per calcolare e stampare la somma dei numeri pari nella lista.
-           
+               print("Calcolo della somma dei numeri pari nella lista generata.")
                n= inserisci_num_positivo()
                lista=genera_lista(n)  #chiamata alla funzione per generare la lista che ha al suo interno la richiesta del numero positivo
                print(f"La lista generata è: {lista}")
@@ -79,6 +75,7 @@ match(x): #x è la variabile che contiene la scelta dell utente
                
        case 4: #4.Utilizza un ciclo for per stampare tutti i numeri dispari nella lista.
            # qui non faccio una funzione a parte perché è un operazione molto semplice da fare direttamente nel case
+                print("Stampa di tutti i numeri dispari nella lista generata.")
                 n= inserisci_num_positivo()
                 lista=genera_lista(n) 
                 print(f"La lista generata è: {lista}")
@@ -88,6 +85,7 @@ match(x): #x è la variabile che contiene la scelta dell utente
                                  print(numero, end=" ") #stampo i numeri dispari separati da uno spazio
                 print() #stampa una nuova linea dopo aver stampato tutti i numeri dispari 
        case 5: #5.Utilizza un ciclo per determinare se un numero è primo. La funzione deve restituire True se il numero è primo, altrimenti False.
+              print("Verifica se un numero è primo.")
               num = inserisci_num_positivo()  #chiamata alla funzione per ottenere un numero positivo
               if è_primo(num):
                   print(f"{num} è un numero primo.")    
@@ -95,6 +93,7 @@ match(x): #x è la variabile che contiene la scelta dell utente
                   print(f"{num} non è un numero primo.")    
               
        case 6:  #6.Utilizza un ciclo for per stampare tutti i numeri primi nella lista.
+                    print("Stampa di tutti i numeri primi nella lista generata.")
                 
                     n= inserisci_num_positivo()
                     lista=genera_lista(n)  #chiamata alla funzione per generare la lista che ha al suo interno la richiesta del numero positivo
@@ -106,6 +105,7 @@ match(x): #x è la variabile che contiene la scelta dell utente
                                  print() #stampa una nuova linea dopo aver stampato tutti i numeri primi
            
        case 7: #7.Infine, utilizza una struttura if per determinare se la somma di tutti i numeri nella lista è un numero primo e stampa il risultato
+                    print("Verifica se la somma di tutti i numeri nella lista è un numero primo.")
                     n= inserisci_num_positivo()
                     lista=genera_lista(n)  #chiamata alla funzione per generare la lista che ha al suo interno la richiesta del numero positivo
                     somma = sum(lista) #calcolo la somma di tutti i numeri nella lista
