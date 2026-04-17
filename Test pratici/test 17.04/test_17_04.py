@@ -37,11 +37,11 @@ while not loggato:
                     break
             
             if esiste:
-                print(f"\nBenvenuto {nome}!")
+                print(f" Benvenut {nome}! :) ")
                 loggato = True
             else:
                 print("Credenziali errate, riprova. oppure registrati se non hai un account.") # aggiungi il ritorno al menu principale per permettere all'utente di scegliere se fare login o registrarsi
-            # vedi dopo
+            
         
         case "2":
             nome = input("Scegli un nome utente: ").strip().lower()
@@ -65,16 +65,23 @@ while not loggato:
             
 #chiedi all'utente di inserire un numero e salvali nella lista . Continua a chiedere finché l'utente non decide di smettere solo se la lista è maggiore di due elementi, poi stampa la lista dei numeri inseriti.
 
-lista = []
-def compila_lista():
+lista = [] #lista globale per salvare i numeri inseriti dall'utente
+
+# FUNZIONI
+
+def compila_lista():# funzione che faccio partire prima dei menu
     while True:
         numero = int(input("Inserisci un numero: "))
-        lista.append(numero)
+        lista.append(numero) #aggiungo il numero inserito alla lista 
 
         scelta = input("Vuoi inserire un altro numero? (si/no): ").lower()
         if scelta == "no": # solo se la lista è maggiore di due elementi
             if len(lista) > 2:
                 break
+            #se numero = parola non lo prende quindi chiedo di inserire un numero valido
+            elif not isinstance(numero, int): 
+                print("Input non valido. Inserisci un numero.")
+                continue
             else:
                 print("Devi inserire almeno 3 numeri prima di poter smettere.")
                 continue
@@ -146,26 +153,31 @@ while True:
                 
                 match scelta:
                     case "1":
-                        print(f"Risultato somma: {somma_pari(lista)}")
+                        print(f"Lista dei numeri che hai scelto è : {lista}")
+                        print(f"Risultato della somma dei nummeri pari della lista è : {somma_pari(lista)}")
                         contatore += 1
                     case "2":
+                        print(f"Lista dei numeri che hai scelto è : {lista}")
                         print(f"Risultato sottrazione: {sottrazione(lista)}")
                         contatore += 1
                     case "3":
+                        print(f"Lista dei numeri che hai scelto è : {lista}")
                         print(f"Risultato moltiplicazione: {moltiplicazione(lista)}")
                         contatore += 1
                     case "4":
+                        print(f"Lista dei numeri che hai scelto è : {lista}")
                         print(f"Risultato divisione: {divisione(lista)}")
                         contatore += 1
                     case "5":
+                        print(f"Lista dei numeri che hai scelto è : {lista}")
                         print(f"Risultato media: {media(lista)}")
                         contatore += 1
                     case _:
                         print("Scelta non valida.")
             
-            print("\nHai eseguito 4 operazioni, devi riloggarti!")
+            print("Hai eseguito 4 operazioni, devi riloggarti!")
             loggato = False
-            break
+            break   # controlliamo se tutto funziona 
         
         case "2":
             while True:
