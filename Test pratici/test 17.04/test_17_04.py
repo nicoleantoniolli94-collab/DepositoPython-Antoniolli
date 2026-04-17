@@ -71,7 +71,7 @@ lista = [] #lista globale per salvare i numeri inseriti dall'utente
 
 def compila_lista():# funzione che faccio partire prima dei menu
     while True:
-        numero = int(input("Inserisci un numero: "))
+        numero = float(input("Inserisci un numero: "))
         lista.append(numero) #aggiungo il numero inserito alla lista 
 
         scelta = input("Vuoi inserire un altro numero? (si/no): ").lower()
